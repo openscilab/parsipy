@@ -1,7 +1,7 @@
 import word_stemmer
 import p2g
 import tokenizer
-
+import pos_tagger
 provided_tasks = ['P2G', 'lemma', 'POS', 'tokenizer']
 
 
@@ -15,7 +15,8 @@ def run(tasks: str, sentence: str):
 
     task_to_function = {
         'P2G': p2g.run,
-        'lemma': word_stemmer.run
+        'lemma': word_stemmer.run,
+        'POS': pos_tagger.run
     }
 
     for task in tasks_list:
@@ -27,4 +28,4 @@ def run(tasks: str, sentence: str):
 
 
 if __name__ == '__main__':
-    print(run(tasks='P2G, lemma, NER', sentence='ruwān ī xwēš andar ayād dār nām ī xwēš rāy xwēš-kārīh'))
+    print(run(tasks='lemma, POS', sentence='gazīdag abar nihād hēnd be baxt hēnd abar saran, abāz asarīg xwāst hēnd sāg ī garān.'))
