@@ -9,5 +9,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Added
 
 
-[Unreleased]: https://github.com/openscilab/opr/compare/v0.1...dev
-[0.1]: https://github.com/openscilab/opr/compare/277cd75...v0.1
+[Unreleased]: https://github.com/openscilab/parsipy/compare/v0.1...dev
+[0.1]: https://github.com/openscilab/parsipy/compare/277cd75...v0.1
