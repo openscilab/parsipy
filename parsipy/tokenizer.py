@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 def cleaning(text: str):
     return text.replace('*', '').replace('(w)', '').replace('[', '').replace(']', '').replace('<', '').replace('>',
                                                                                                                '')

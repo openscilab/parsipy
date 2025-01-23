@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import word_stemmer
 import p2g
 import tokenizer
