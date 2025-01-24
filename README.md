@@ -3,7 +3,7 @@
     <br/>
     <a href="https://badge.fury.io/py/parsipy"><img src="https://badge.fury.io/py/parsipy.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
-	<a href="https://github.com/openscilab/parsipy"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/parsipy"></a>
+    <a href="https://github.com/openscilab/parsipy"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/parsipy"></a>
     <a href="https://discord.gg/TODO"><img src="https://img.shields.io/discord/TODO.svg" alt="Discord Channel"></a>
 </div>
 
