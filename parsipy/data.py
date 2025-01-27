@@ -17,6 +17,8 @@ def get_data_path(data_name):
 
 ROOTS = list(pd.read_json(get_data_path('roots.json'))['data'])
 
+STEMS = pd.read_csv(get_data_path('stems.csv'))
+
 
 PREFIXES = {
     'a': '',

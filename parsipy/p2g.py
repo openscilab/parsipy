@@ -3,9 +3,9 @@ import pandas as pd
 import word_stemmer
 from .data import PREFIXES, POSTFIXES
 from .data import TRANSLITERATION_TO_TRANSCRIPTION_RULES
+from .data import STEMS
 
 
-stems = pd.read_csv('stems_new.csv')
 
 
 def oov_translit(word):
@@ -30,7 +30,7 @@ def get_transliteration(stem, post_fixes_list: list, pre_fixes_list: list):
     else:
         pre_fixes = ''
 
-    for stem_, transit_ in zip(stems['stem'], stems['stem_translit']):
+    for stem_, transit_ in zip(STEMS['stem'], STEMS['stem_translit']):
         if stem_ == stem:
             return str(pre_fixes) + str(transit_) + str(post_fixes)
     # Return None if no match is found to ensure consistent function behavior
