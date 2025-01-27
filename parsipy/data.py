@@ -1,5 +1,22 @@
 # -*- coding: utf-8 -*-
 
+import os
+import pandas as pd
+
+def get_data_path(data_name):
+    """
+    Return data file path.
+
+    :param data_name: data file name
+    :type data_name: str
+    :return: direct path to data file
+    """
+    cd, _ = os.path.split(__file__)
+    return os.path.join(cd, "data", data_name)
+
+
+ROOTS = list(pd.read_json(get_data_path('roots.json'))['data'])
+
 
 PREFIXES = {
     'a': '',

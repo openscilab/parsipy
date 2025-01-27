@@ -2,12 +2,11 @@
 import pandas as pd
 import copy
 from .data import PREFIXES, POSTFIXES
-
-df_ = list(pd.read_json('roots.json')['data'])
+from .data import ROOTS
 
 def find_root(word: str):
     def is_goal(stem):
-        if stem in df_:
+        if stem in ROOTS:
             return True
         return False
 
