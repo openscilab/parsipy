@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
 import copy
 from .data import PREFIXES, POSTFIXES
 from .data import ROOTS
 
-def find_root(word: str):
+def find_root(word):
     def is_goal(stem):
         if stem in ROOTS:
             return True
@@ -42,18 +41,4 @@ def find_root(word: str):
                                  'post_fixes_list': postfixes_list, 'pre_fixes_list': prefix_list}
                 if new_candidate not in visited:
                     candidates.append(new_candidate)
-    ## none
     return {'stem': word, 'post_fixes_list': [], 'pre_fixes_list': []}
-
-
-def run(sentence: str):
-    my_list = []
-    for word in sentence.split():
-        roots = find_root(word)
-        data = {'text': word, 'stem': roots['stem']}
-        my_list.append(data)
-    return my_list
-
-
-if __name__ == '__main__':
-    print(run('ruwān ī xwēš andar ayād dār nām ī xwēš rāy xwēš-kārīh '))

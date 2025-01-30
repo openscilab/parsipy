@@ -28,5 +28,7 @@ def run(tasks: str, sentence: str):
     return final_output
 
 
+
+
 if __name__ == '__main__':
     print(run(tasks='lemma, POS', sentence='gazīdag abar nihād hēnd be baxt hēnd abar saran, abāz asarīg xwāst hēnd sāg ī garān.'))
