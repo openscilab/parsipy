@@ -18,7 +18,7 @@ def oov_translit(word):
     return new_word
 
 
-def get_transliteration(stem, post_fixes_list: list, pre_fixes_list: list):
+def get_transliteration(stem, post_fixes_list, pre_fixes_list):
     if post_fixes_list:
         post_fixes = ''.join(POSTFIXES[post_fix] for post_fix in reversed(post_fixes_list))
     else:
