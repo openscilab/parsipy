@@ -4,8 +4,9 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import re
 from collections import defaultdict
+from .params import POS_MAPPING
 
-class ParsigPOSLoader:
+class POSLoader:
     def __init__(self, dataset_file_name, test_portion=0.1):
         self.test_portion = test_portion
         self.MPTextWord = None
@@ -48,26 +49,11 @@ class ParsigPOSLoader:
         self.MPTextWord2 = self.MPTextWord2.drop(['Pronunciation', 'EnTranslation', 'Transliteration', 'Translation', 'WordRoot'], axis=1)
 
     def pos_mapping(self):
-        pos_mapping = {
-            10: 'N',     # Noun
-            20: 'ADJ',   # ADJective
-            21: 'DET',   # DETerminer
-            30: 'V',     # Verb
-            40: 'ADV',   # ADVerb
-            50: 'PRON',  # PRONoun
-            60: 'PREP',  # PREPosition
-            61: 'POST',  # POSTposition
-            63: 'CONJ',  # CONJunction
-            64: 'EZ',    # EZafeh
-            70: 'NUM',   # NUMber
-            80: 'PART'   # PARTicle
-        }
+        self.MPTextWord['Pos'] = self.MPTextWord['WordCategoryCode'].map(POS_MAPPING)
+        self.MPTextWord['Pos'] = self.MPTextWord['WordCategoryCode'].map(POS_MAPPING).fillna('Unknown')
 
-        self.MPTextWord['Pos'] = self.MPTextWord['WordCategoryCode'].map(pos_mapping)
-        self.MPTextWord['Pos'] = self.MPTextWord['WordCategoryCode'].map(pos_mapping).fillna('Unknown')
-
-        self.MPTextWord2['Pos'] = self.MPTextWord2['WordCategoryCode'].map(pos_mapping)
-        self.MPTextWord2['Pos'] = self.MPTextWord2['WordCategoryCode'].map(pos_mapping).fillna('Unknown')
+        self.MPTextWord2['Pos'] = self.MPTextWord2['WordCategoryCode'].map(POS_MAPPING)
+        self.MPTextWord2['Pos'] = self.MPTextWord2['WordCategoryCode'].map(POS_MAPPING).fillna('Unknown')
 
     def get_word_tag(self, df):
         """
@@ -106,11 +92,11 @@ class ParsigPOSLoader:
 
 
 class POSTagger:
-    def __init__(self, dataset_loader, smoothing_const=0.0001, Training=True):
+    def __init__(self, dataset_loader, smoothing_const=0.0001, training=True):
         self.emission_file_name = 'emission_parsig.csv'
         self.transition_file_name = 'transition_parsig.csv'
         self.smoothing_const = smoothing_const
-        if Training:
+        if training:
             self.train_set, self.test_set = dataset_loader.split_train_val_test_set()
             self.test_run_base = [tup for sent in self.test_set for tup in sent]
             self.test_tagged_words = [tup[0] for sent in self.test_set for tup in sent]
@@ -282,25 +268,3 @@ class POSTagger:
         print("\nPer-tag metrics:")
         for tag, metrics in tag_metrics.items():
             print(f"{tag}: precision={metrics['precision']:.3f}, recall={metrics['recall']:.3f}, F1={metrics['f1']:.3f} (support={metrics['support']})")
-
-
-def pos_tagger_evaluation():
-    loader = ParsigPOSLoader('Parsig Database.xls')
-    tagger = POSTagger(loader)
-    tagger.train()
-    tagged_results = tagger.viterbi(tagger.test_tagged_words, smoothing=True)
-    tagger.print_evaluation(tagged_results)
-
-
-def run(sentence: str):
-    loader = ParsigPOSLoader('Parsig Database.xls', 0)
-    tagger = POSTagger(loader, Training = False)
-    tagger.load()
-    res = []
-    for word, tag in tagger.viterbi(("<S> "+ sentence).split(), smoothing=True):
-        res.append({'text': word, 'POS': tag})
-    return res[1:] # remove the first element due to the added '<S>' tag
-
-if __name__ == '__main__':
-    pos_tagger_evaluation()
-    print(run("gazīdag abar nihād hēnd be baxt hēnd abar saran, abāz asarīg xwāst hēnd sāg ī garān."))
