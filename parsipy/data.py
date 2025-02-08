@@ -12,12 +12,16 @@ def get_data_path(data_name):
     :return: direct path to data file
     """
     cd, _ = os.path.split(__file__)
-    return os.path.join(cd, "data", data_name)
+    return os.path.join(cd, "files", data_name)
 
 
 ROOTS = list(pd.read_json(get_data_path('roots.json'))['data'])
 
 STEMS = pd.read_csv(get_data_path('stems.csv'))
+
+EMISSION = pd.read_csv(get_data_path("emission.csv"), index_col=0)
+
+TRANSITION = pd.read_csv(get_data_path("transition.csv"), index_col=0)
 
 
 PREFIXES = {

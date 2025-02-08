@@ -1,34 +1,28 @@
 # -*- coding: utf-8 -*-
-import word_stemmer
-import p2g
-import tokenizer
-import pos_tagger
-provided_tasks = ['P2G', 'lemma', 'POS', 'tokenizer']
+from .word_stemmer import run as word_stemmer_run
+from .p2g import run as p2g_run
+from .tokenizer import run as tokenizer_run
+from .pos_tagger import run as pos_tagger_run
+
+PROVIDED_TASKS = ['P2G', 'lemma', 'POS', 'tokenizer']
 
 
-def run(tasks: str, sentence: str):
+def pipeline(tasks, sentence):
     tasks_list = [task.strip() for task in tasks.split(',')]
-    invalid_tasks = [task for task in tasks_list if task not in provided_tasks]
+    invalid_tasks = [task for task in tasks_list if task not in PROVIDED_TASKS]
     if invalid_tasks:
-        raise ValueError(f"Sorry, the following tasks are not provided yet: {', '.join(invalid_tasks)}")
-
-    final_output = tokenizer.run(sentence)
+        raise ValueError("Sorry, the following tasks are not provided yet: {invalid_tasks}".format(invalid_tasks=', '.join(invalid_tasks)))
+    final_output = dict()
+    final_output["tokenizer"] = tokenizer_run(sentence)
 
     task_to_function = {
-        'P2G': p2g.run,
-        'lemma': word_stemmer.run,
-        'POS': pos_tagger.run
+        'P2G': p2g_run,
+        'lemma': word_stemmer_run,
+        'POS': pos_tagger_run
     }
 
     for task in tasks_list:
         if task in task_to_function:
             task_output = task_to_function[task](sentence)
-            final_output = [current_output | task_output for current_output, task_output in
-                            zip(final_output, task_output)]
+            final_output[task] = task_output
     return final_output
-
-
-
-
-if __name__ == '__main__':
-    print(run(tasks='lemma, POS', sentence='gazīdag abar nihād hēnd be baxt hēnd abar saran, abāz asarīg xwāst hēnd sāg ī garān.'))

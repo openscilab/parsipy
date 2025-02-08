@@ -43,6 +43,7 @@ setup(
             'Source': 'https://github.com/openscilab/parsipy',
     },
     install_requires=get_requires(),
+    include_package_data=True,
     python_requires='>=3.6',
     classifiers=[
         'Development Status :: 3 - Alpha',

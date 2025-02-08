@@ -42,3 +42,12 @@ def find_root(word):
                 if new_candidate not in visited:
                     candidates.append(new_candidate)
     return {'stem': word, 'post_fixes_list': [], 'pre_fixes_list': []}
+
+
+def run(sentence):
+    result = []
+    for word in sentence.split():
+        roots = find_root(word)
+        data = {'text': word, 'stem': roots['stem']}
+        result.append(data)
+    return result

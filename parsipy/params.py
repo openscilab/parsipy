@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from enum import Enum
 
 PARSIPY_VERSION = "0.1"
 
@@ -16,3 +17,6 @@ POS_MAPPING = {
             70: 'NUM',   # NUMber
             80: 'PART'   # PARTicle
         }
+
+class POSTaggerModel(Enum):
+    RULE_BASED = "rule_based"
