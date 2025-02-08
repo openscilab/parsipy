@@ -5,8 +5,6 @@ from .data import TRANSLITERATION_TO_TRANSCRIPTION_RULES
 from .data import STEMS
 
 
-
-
 def oov_translit(word):
     first_letter = True
     new_word = ''
