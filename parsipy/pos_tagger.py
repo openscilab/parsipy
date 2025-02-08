@@ -4,13 +4,30 @@ from .params import POSTaggerModel, POS_MAPPING
 
 
 class POSTaggerRuleBased:
+    """Rule-based POS tagger using Viterbi algorithm."""
+
     def __init__(self, smoothing_const=0.0001):
+        """
+        Initialize the POS tagger.
+        
+        :param smoothing_const: Smoothing constant for unknown words
+        :type smoothing_const: float
+        """
         self.smoothing_const = smoothing_const
         self.trans_df = TRANSITION
         self.emission_df = EMISSION
         self.tagset = sorted(set(POS_MAPPING.values()))
 
     def viterbi(self, words, smoothing=True):
+        """
+        Viterbi decoding algorithm for POS tagging.
+        
+        :param words: List of words
+        :type words: list
+        :param smoothing: Whether to use smoothing for unknown words
+        :type smoothing: bool
+        :return: List of tuples containing word and its POS tag
+        """
         viterbi_list = []
         for key, word in enumerate(words):
             if word.endswith('īhā'):
@@ -41,7 +58,15 @@ class POSTaggerRuleBased:
 
 
 class POSTagger:
+    """POS Tagger class."""
+
     def __init__(self, model=POSTaggerModel.RULE_BASED):
+        """
+        Initialize the POS tagger.
+        
+        :param model: POS tagger model
+        :type model: POSTaggerModel
+        """
         self.model = model
         if model == POSTaggerModel.RULE_BASED:
             self.tagger = POSTaggerRuleBased()
@@ -49,6 +74,13 @@ class POSTagger:
             pass
 
     def tag(self, sentence):
+        """
+        Return positional information of the words in the sentence.
+        
+        :param sentence: Input sentence
+        :type sentence: str
+        :return: List of dictionaries containing word and its POS tag
+        """
         if self.model == POSTaggerModel.RULE_BASED:
             result = []
             for word, tag in self.tagger.viterbi(("<S> " + sentence).split(), smoothing=True):
@@ -59,5 +91,12 @@ class POSTagger:
 
 
 def run(sentence):
+    """
+    Run the POS tagger on the input sentence.
+
+    :param sentence: Input sentence
+    :type sentence: str
+    :return: List of dictionaries containing word and its POS tag
+    """
     tagger = POSTagger()
     return tagger.tag(sentence=sentence)
