@@ -34,3 +34,12 @@ def get_transliteration(stem, post_fixes_list, pre_fixes_list):
             return str(pre_fixes) + str(transit_) + str(post_fixes)
     # Return None if no match is found to ensure consistent function behavior
     return oov_translit(stem)
+
+
+def run(sentence):
+    result = []
+    for word in sentence.split():
+        roots = word_stemmer.find_root(word)
+        data = {'text': word, 'transliteration': get_transliteration(**roots)}
+        result.append(data)
+    return result
