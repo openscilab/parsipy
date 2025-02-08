@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from .params import EMISSION, TRANSITION
+from .data import EMISSION, TRANSITION
 from .params import POSTaggerMethod, POS_MAPPING
 
 
@@ -25,7 +25,7 @@ class POSTaggerRuleBased:
                     last_state = viterbi_list[-1]
                     transition_p = self.trans_df.loc[last_state, tag]
 
-                if word in self.vocab:
+                if word in self.emission_df.index:
                     emission_p = self.emission_df.loc[word, tag]
                 elif smoothing:
                     emission_p = self.smoothing_const
