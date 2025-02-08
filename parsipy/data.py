@@ -19,6 +19,10 @@ ROOTS = list(pd.read_json(get_data_path('roots.json'))['data'])
 
 STEMS = pd.read_csv(get_data_path('stems.csv'))
 
+EMISSION = pd.read_csv(get_data_path("emission.csv"), index_col=0)
+
+TRANSITION = pd.read_csv(get_data_path("transition.csv"), index_col=0)
+
 
 PREFIXES = {
     'a': '',
