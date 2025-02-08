@@ -4,5 +4,5 @@ include *.spec
 include *.txt
 include *.yml
 include *.ini
-include parsipy/data/*.csv
-include parsipy/data/*.json
+include parsipy/files/*.csv
+include parsipy/files/*.json
