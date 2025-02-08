@@ -75,7 +75,7 @@ class POSTagger:
 
     def tag(self, sentence):
         """
-        Return positional information of the words in the sentence.
+        Return part-of-speech information of the words in the sentence.
         
         :param sentence: Input sentence
         :type sentence: str
