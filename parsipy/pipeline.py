@@ -12,8 +12,8 @@ def pipeline(tasks, sentence):
     invalid_tasks = [task for task in tasks_list if task not in PROVIDED_TASKS]
     if invalid_tasks:
         raise ValueError("Sorry, the following tasks are not provided yet: {invalid_tasks}".format(invalid_tasks=', '.join(invalid_tasks)))
-
-    final_output = tokenizer_run(sentence)
+    final_output = dict()
+    final_output["tokenizer"] = tokenizer_run(sentence)
 
     task_to_function = {
         'P2G': p2g_run,
@@ -24,6 +24,5 @@ def pipeline(tasks, sentence):
     for task in tasks_list:
         if task in task_to_function:
             task_output = task_to_function[task](sentence)
-            final_output = [current_output | task_output for current_output, task_output in
-                            zip(final_output, task_output)]
+            final_output[task] = task_output
     return final_output
