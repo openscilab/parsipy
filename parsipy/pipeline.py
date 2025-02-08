@@ -23,12 +23,12 @@ def pipeline(tasks, sentence):
     :type sentence: str
     :return: Dictionary containing the output of each task
     """
-    unsupported_tasks = [x for x in tasks if x not in Tasks.keys()]
+    unsupported_tasks = [x for x in tasks if x not in Tasks]
     if unsupported_tasks:
         raise ValueError(INVALID_TASKS.format(unsupported_tasks=', '.join(unsupported_tasks)))
     
     result = {}
     for task in tasks:
-        task_output = TASK2FUNCTION[task](sentence)
+        task_output = TASK2FUNCTION[task.value](sentence)
         result[task] = task_output
     return result
