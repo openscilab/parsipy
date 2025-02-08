@@ -30,5 +30,5 @@ def pipeline(tasks, sentence):
     result = {}
     for task in tasks:
         task_output = TASK2FUNCTION[task.value](sentence)
-        result[task] = task_output
+        result[task.value] = task_output
     return result
