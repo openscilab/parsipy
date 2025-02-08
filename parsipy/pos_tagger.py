@@ -43,13 +43,13 @@ class POSTaggerRuleBased:
 class POSTagger:
     def __init__(self, model=POSTaggerModel.RULE_BASED):
         self.model = model
-        if model == POSTaggerMethod.RULE_BASED:
+        if model == POSTaggerModel.RULE_BASED:
             self.tagger = POSTaggerRuleBased()
         else:
             pass
 
     def tag(self, sentence):
-        if self.model == POSTaggerMethod.RULE_BASED:
+        if self.model == POSTaggerModel.RULE_BASED:
             result = []
             for word, tag in self.tagger.viterbi(("<S> " + sentence).split(), smoothing=True):
                 result.append({'text': word, 'POS': tag})
