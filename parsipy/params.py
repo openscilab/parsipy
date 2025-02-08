@@ -21,9 +21,11 @@ POS_MAPPING = {
         }
 
 class POSTaggerModel(Enum):
+    """POSTagger models"""
     RULE_BASED = "rule_based"
 
 class Tasks(Enum):
+    """Tasks supported by Parsipy"""
     LEMMA = "lemma"
     POS = "POS"
     P2G = "P2G"
