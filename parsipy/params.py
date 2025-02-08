@@ -18,5 +18,5 @@ POS_MAPPING = {
             80: 'PART'   # PARTicle
         }
 
-class POSTaggerMethod(Enum):
+class POSTaggerModel(Enum):
     RULE_BASED = "rule_based"

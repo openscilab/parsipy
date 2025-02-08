@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from .data import EMISSION, TRANSITION
-from .params import POSTaggerMethod, POS_MAPPING
+from .params import POSTaggerModel, POS_MAPPING
 
 
 class POSTaggerRuleBased:
@@ -41,7 +41,7 @@ class POSTaggerRuleBased:
 
 
 class POSTagger:
-    def __init__(self, model=POSTaggerMethod.RULE_BASED):
+    def __init__(self, model=POSTaggerModel.RULE_BASED):
         self.model = model
         if model == POSTaggerMethod.RULE_BASED:
             self.tagger = POSTaggerRuleBased()
