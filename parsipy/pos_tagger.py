@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-import pandas as pd
-from .params import EMISSION, TRANSITION, POS_MAPPING
+from .params import EMISSION, TRANSITION
+from .params import POSTaggerMethod, POS_MAPPING
 
 
 class POSTaggerRuleBased:
@@ -35,7 +35,29 @@ class POSTaggerRuleBased:
                 if prob >= max_prob:
                     max_prob = prob
                     best_tag = tag
-            #     print(f"word: {word}, tag: {tag}, emission_p: {emission_p}, transition_p: {transition_p}, prob: {prob}, best_tag: {best_tag}")
             viterbi_list.append(best_tag)
         word_tag = list(zip(words, viterbi_list))
         return word_tag
+
+
+class POSTagger:
+    def __init__(self, model=POSTaggerMethod.RULE_BASED):
+        self.model = model
+        if model == POSTaggerMethod.RULE_BASED:
+            self.tagger = POSTaggerRuleBased()
+        else:
+            pass
+
+    def tag(self, sentence):
+        if self.model == POSTaggerMethod.RULE_BASED:
+            result = []
+            for word, tag in self.tagger.viterbi(("<S> " + sentence).split(), smoothing=True):
+                result.append({'text': word, 'POS': tag})
+            return result[1:]
+        else:
+            pass
+
+
+def run(sentence):
+    tagger = POSTagger()
+    return tagger.tag(sentence=sentence)
