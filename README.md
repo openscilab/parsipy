@@ -80,70 +80,70 @@ The result is a dictionary containing the outputs of all requested tasks:
 
 ```json
 {
-    'tokenizer': [
-        {'id': 0, 'text': 'ān'},
-        {'id': 1, 'text': 'uzīd'},
-        {'id': 2, 'text': 'frāmōš'},
-        {'id': 3, 'text': 'kun'},
-        {'id': 4, 'text': 'ud'},
-        {'id': 5, 'text': 'ān'},
-        {'id': 6, 'text': 'nē'},
-        {'id': 7, 'text': 'mad'},
-        {'id': 8, 'text': 'ēstēd'},
-        {'id': 9, 'text': 'rāy'},
-        {'id': 10, 'text': 'tēmār'},
-        {'id': 11, 'text': 'bēš'},
-        {'id': 12, 'text': 'ma'},
-        {'id': 13, 'text': 'bar'}
+    "tokenizer": [
+        {"id": 0, "text": "ān"},
+        {"id": 1, "text": "uzīd"},
+        {"id": 2, "text": "frāmōš"},
+        {"id": 3, "text": "kun"},
+        {"id": 4, "text": "ud"},
+        {"id": 5, "text": "ān"},
+        {"id": 6, "text": "nē"},
+        {"id": 7, "text": "mad"},
+        {"id": 8, "text": "ēstēd"},
+        {"id": 9, "text": "rāy"},
+        {"id": 10, "text": "tēmār"},
+        {"id": 11, "text": "bēš"},
+        {"id": 12, "text": "ma"},
+        {"id": 13, "text": "bar"}
     ],
-    'lemma': [
-        {'stem': 'ān', 'text': 'ān'},
-        {'stem': 'uzīd', 'text': 'uzīd'},
-        {'stem': 'frāmōš', 'text': 'frāmōš'},
-        {'stem': 'kun', 'text': 'kun'},
-        {'stem': 'ud', 'text': 'ud'},
-        {'stem': 'ān', 'text': 'ān'},
-        {'stem': 'nē', 'text': 'nē'},
-        {'stem': 'mad', 'text': 'mad'},
-        {'stem': 'ēst', 'text': 'ēstēd'},
-        {'stem': 'rāy', 'text': 'rāy'},
-        {'stem': 'tēmār', 'text': 'tēmār'},
-        {'stem': 'bēš', 'text': 'bēš'},
-        {'stem': 'ma', 'text': 'ma'},
-        {'stem': 'bar', 'text': 'bar'}
+    "lemma": [
+        {"stem": "ān", "text": "ān"},
+        {"stem": "uzīd", "text": "uzīd"},
+        {"stem": "frāmōš", "text": "frāmōš"},
+        {"stem": "kun", "text": "kun"},
+        {"stem": "ud", "text": "ud"},
+        {"stem": "ān", "text": "ān"},
+        {"stem": "nē", "text": "nē"},
+        {"stem": "mad", "text": "mad"},
+        {"stem": "ēst", "text": "ēstēd"},
+        {"stem": "rāy", "text": "rāy"},
+        {"stem": "tēmār", "text": "tēmār"},
+        {"stem": "bēš", "text": "bēš"},
+        {"stem": "ma", "text": "ma"},
+        {"stem": "bar", "text": "bar"}
     ],
 
-    'POS': [
-        {'POS': 'DET', 'text': 'ān'},
-        {'POS': 'N', 'text': 'uzīd'},
-        {'POS': 'N', 'text': 'frāmōš'},
-        {'POS': 'V', 'text': 'kun'},
-        {'POS': 'CONJ', 'text': 'ud'},
-        {'POS': 'DET', 'text': 'ān'},
-        {'POS': 'ADV', 'text': 'nē'},
-        {'POS': 'V', 'text': 'mad'},
-        {'POS': 'V', 'text': 'ēstēd'},
-        {'POS': 'POST', 'text': 'rāy'},
-        {'POS': 'N', 'text': 'tēmār'},
-        {'POS': 'N', 'text': 'bēš'},
-        {'POS': 'ADV', 'text': 'ma'},
-        {'POS': 'N', 'text': 'bar'}
+    "POS": [
+        {"POS": "DET", "text": "ān"},
+        {"POS": "N", "text": "uzīd"},
+        {"POS": "N", "text": "frāmōš"},
+        {"POS": "V", "text": "kun"},
+        {"POS": "CONJ", "text": "ud"},
+        {"POS": "DET", "text": "ān"},
+        {"POS": "ADV", "text": "nē"},
+        {"POS": "V", "text": "mad"},
+        {"POS": "V", "text": "ēstēd"},
+        {"POS": "POST", "text": "rāy"},
+        {"POS": "N", "text": "tēmār"},
+        {"POS": "N", "text": "bēš"},
+        {"POS": "ADV", "text": "ma"},
+        {"POS": "N", "text": "bar"}
     ],
-    'P2G': [
-        {'text': 'ān', 'transliteration': 'ZK'},
-        {'text': 'uzīd', 'transliteration': 'ʾwcyt'},
-        {'text': 'frāmōš', 'transliteration': 'plʾmwš'},
-        {'text': 'kun', 'transliteration': 'OḆYDWNt͟y'},
-        {'text': 'ud', 'transliteration': 'W'},
-        {'text': 'ān', 'transliteration': 'ZK'},
-        {'text': 'nē', 'transliteration': 'LA'},
-        {'text': 'mad', 'transliteration': 'mt'},
-        {'text': 'ēstēd', 'transliteration': "YKOYMWyt'"},
-        {'text': 'rāy', 'transliteration': 'lʾd'},
-        {'text': 'tēmār', 'transliteration': 'tymʾl'},
-        {'text': 'bēš', 'transliteration': 'byš'},
-        {'text': 'ma', 'transliteration': 'AL'},
-        {'text': 'bar', 'transliteration': 'YḆLWN'}
+    "P2G": [
+        {"text": "ān", "transliteration": "ZK"},
+        {"text": "uzīd", "transliteration": "ʾwcyt"},
+        {"text": "frāmōš", "transliteration": "plʾmwš"},
+        {"text": "kun", "transliteration": "OḆYDWNt͟y"},
+        {"text": "ud", "transliteration": "W"},
+        {"text": "ān", "transliteration": "ZK"},
+        {"text": "nē", "transliteration": "LA"},
+        {"text": "mad", "transliteration": "mt"},
+        {"text": "ēstēd", "transliteration": "YKOYMWyt'"},
+        {"text": "rāy", "transliteration": "lʾd"},
+        {"text": "tēmār", "transliteration": "tymʾl"},
+        {"text": "bēš", "transliteration": "byš"},
+        {"text": "ma", "transliteration": "AL"},
+        {"text": "bar", "transliteration": "YḆLWN"}
     ]
 }
 ```
@@ -153,7 +153,7 @@ Below is a brief explanation of each task:
 #### Tokenization
 This module splits a sentence into individual tokens, making it easier to process each word separately. Tokenization is a crucial first step for many NLP tasks.
 
-#### lemmatization
+#### Lemmatization
 Lemmatization reduces words to their base or root forms, removing prefixes and suffixes. This is useful for standardizing different word variations.
 
 #### POS
