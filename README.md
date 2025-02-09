@@ -71,9 +71,9 @@ Its rough English translation is: *"Forget what is gone and do not worry about w
 You can easily apply tokenization, lemmatization, POS tagging, and phoneme-to-grapheme conversion to this text using the following code:
 
 ```pycon
->>> from parsipy import pipeline, Tasks
+>>> from parsipy import pipeline, Task
 >>> result = pipeline(sentence='ān uzīd frāmōš kun ud ān nē mad ēstēd rāy tēmār bēš ma bar',
-                      tasks=[Tasks.TOKENIZER, Tasks.LEMMA, Tasks.POS, Tasks.P2G])
+                      tasks=[Task.TOKENIZER, Task.LEMMA, Task.POS, Task.P2G])
 ```
 
 The result is a dictionary containing the outputs of all requested tasks:
