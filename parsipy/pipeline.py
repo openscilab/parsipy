@@ -3,13 +3,13 @@ from .word_stemmer import run as word_stemmer_run
 from .p2g import run as p2g_run
 from .tokenizer import run as tokenizer_run
 from .pos_tagger import run as pos_tagger_run
-from .params import Tasks, INVALID_TASKS
+from .params import Task, INVALID_TASKS
 
 TASK2FUNCTION = {
-        Tasks.TOKENIZER.value: tokenizer_run,
-        Tasks.P2G.value: p2g_run,
-        Tasks.LEMMA.value: word_stemmer_run,
-        Tasks.POS.value: pos_tagger_run
+        Task.TOKENIZER.value: tokenizer_run,
+        Task.P2G.value: p2g_run,
+        Task.LEMMA.value: word_stemmer_run,
+        Task.POS.value: pos_tagger_run
 }
 
 
@@ -23,7 +23,7 @@ def pipeline(tasks, sentence):
     :type sentence: str
     :return: Dictionary containing the output of each task
     """
-    unsupported_tasks = [x for x in tasks if x not in Tasks]
+    unsupported_tasks = [x for x in tasks if x not in Task]
     if unsupported_tasks:
         raise ValueError(INVALID_TASKS.format(unsupported_tasks=', '.join(unsupported_tasks)))
     

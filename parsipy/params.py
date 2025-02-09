@@ -24,7 +24,7 @@ class POSTaggerModel(Enum):
     """POSTagger models"""
     RULE_BASED = "rule_based"
 
-class Tasks(Enum):
+class Task(Enum):
     """Tasks supported by Parsipy"""
     LEMMA = "lemma"
     POS = "POS"
