@@ -4,7 +4,6 @@
     <a href="https://badge.fury.io/py/parsipy"><img src="https://badge.fury.io/py/parsipy.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
     <a href="https://github.com/openscilab/parsipy"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/parsipy"></a>
-    <a href="https://discord.gg/TODO"><img src="https://img.shields.io/discord/TODO.svg" alt="Discord Channel"></a>
 </div>
 
 ----------
@@ -171,12 +170,7 @@ For converting transliteration to Parsig font, you can use [this exe file and fo
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [parsipy@openscilab.com](mailto:parsipy@openscilab.com "parsipy@openscilab.com"). 
 
 - Please complete the issue template
- 
-You can also join our discord server
 
-<a href="https://discord.gg/TODO">
-  <img src="https://img.shields.io/discord/TODO.svg?style=for-the-badge" alt="Discord Channel">
-</a>
 
 ## References
 1- گشتاسب, فرزانه, and حاجی پور. "توصیف و تبیین ماهیت عدالت خسرو انوشیروان در متون فارسی و جستجوی پیشینه آن در متون فارسی میانه." (فصلنامه مطالعات تاریخ فرهنگی) پژوهشنامه انجمن ایرانی تاریخ 14.53 (2022): 101-125.
