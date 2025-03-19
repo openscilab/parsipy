@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import pipeline
-
+"""main."""
 if __name__ == '__main__':
     pass

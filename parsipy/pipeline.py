@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
+"""pipeline."""
 from .word_stemmer import run as word_stemmer_run
-from .p2g import run as p2g_run
+from .p2t import run as p2t_run
 from .tokenizer import run as tokenizer_run
 from .pos_tagger import run as pos_tagger_run
 from .params import Task, INVALID_TASKS
 
 TASK2FUNCTION = {
         Task.TOKENIZER.value: tokenizer_run,
-        Task.P2G.value: p2g_run,
+        Task.P2T.value: p2t_run,
         Task.LEMMA.value: word_stemmer_run,
         Task.POS.value: pos_tagger_run
 }

@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""transliteration."""
 from .word_stemmer import find_root
 from .data import PREFIXES, POSTFIXES
 from .data import TRANSLITERATION_TO_TRANSCRIPTION_RULES
@@ -7,8 +8,7 @@ from .data import STEMS
 
 def oov_transliterate(word):
     """
-    Out of vocabulary transliteration function.
-    This function transliterates a word that is not in the STEMS dictionary.
+    Transliterates a word that is not in the STEMS dictionary.
     
     :param word: word to be transliterated
     :type word: str
@@ -26,7 +26,7 @@ def oov_transliterate(word):
 
 def get_transliteration(stem, post_fixes_list, pre_fixes_list):
     """
-    This function returns the transliteration of a word given its stem and affixes.
+    Transliteration of a word given its stem and affixes.
 
     :param stem: word stem
     :type stem: str
@@ -55,8 +55,7 @@ def get_transliteration(stem, post_fixes_list, pre_fixes_list):
 
 def run(sentence):
     """
-    This function takes a sentence as input and returns a list of dictionaries containing the word, its transliteration,
-    and its transcription.
+    Run the transliteration on a sentence.
 
     :param sentence: sentence to be processed
     :type sentence: str

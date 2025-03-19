@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
+"""tokenizer."""
 def cleaning(text):
     """
-    Cleaning the text from special characters
+    Clean the text from special characters.
     
     :param text: input text
     :type text: str

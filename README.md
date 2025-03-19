@@ -4,7 +4,6 @@
     <a href="https://badge.fury.io/py/parsipy"><img src="https://badge.fury.io/py/parsipy.svg" alt="PyPI version"></a>
     <a href="https://www.python.org/"><img src="https://img.shields.io/badge/built%20with-Python3-green.svg" alt="built with Python3"></a>
     <a href="https://github.com/openscilab/parsipy"><img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/openscilab/parsipy"></a>
-    <a href="https://discord.gg/TODO"><img src="https://img.shields.io/discord/TODO.svg" alt="Discord Channel"></a>
 </div>
 
 ----------
@@ -73,7 +72,7 @@ You can easily apply tokenization, lemmatization, POS tagging, and phoneme-to-gr
 ```pycon
 >>> from parsipy import pipeline, Task
 >>> result = pipeline(sentence='ān uzīd frāmōš kun ud ān nē mad ēstēd rāy tēmār bēš ma bar',
-                      tasks=[Task.TOKENIZER, Task.LEMMA, Task.POS, Task.P2G])
+                      tasks=[Task.TOKENIZER, Task.LEMMA, Task.POS, Task.P2T])
 ```
 
 The result is a dictionary containing the outputs of all requested tasks:
@@ -129,7 +128,7 @@ The result is a dictionary containing the outputs of all requested tasks:
         {"POS": "ADV", "text": "ma"},
         {"POS": "N", "text": "bar"}
     ],
-    "P2G": [
+    "P2T": [
         {"text": "ān", "transliteration": "ZK"},
         {"text": "uzīd", "transliteration": "ʾwcyt"},
         {"text": "frāmōš", "transliteration": "plʾmwš"},
@@ -159,7 +158,7 @@ Lemmatization reduces words to their base or root forms, removing prefixes and s
 #### POS
 This module assigns a part-of-speech (POS) tag to each word in a sentence based on its grammatical role. The output provides essential grammatical information for further text analysis.
 
-#### P2G
+#### P2T
 Since there is no widely accepted Unicode representation for the original Pahlavi script, digital texts are often written in a phonetic form.
 This module maps phonetic representations to their transliteration which is a middle-form between phonetic and their original characters.
 We also present a tool for converting the transliteration into the original text format.
@@ -171,12 +170,7 @@ For converting transliteration to Parsig font, you can use [this exe file and fo
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [parsipy@openscilab.com](mailto:parsipy@openscilab.com "parsipy@openscilab.com"). 
 
 - Please complete the issue template
- 
-You can also join our discord server
 
-<a href="https://discord.gg/TODO">
-  <img src="https://img.shields.io/discord/TODO.svg?style=for-the-badge" alt="Discord Channel">
-</a>
 
 ## References
 1- گشتاسب, فرزانه, and حاجی پور. "توصیف و تبیین ماهیت عدالت خسرو انوشیروان در متون فارسی و جستجوی پیشینه آن در متون فارسی میانه." (فصلنامه مطالعات تاریخ فرهنگی) پژوهشنامه انجمن ایرانی تاریخ 14.53 (2022): 101-125.

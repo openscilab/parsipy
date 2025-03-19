@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""POS tagger."""
 from .data import EMISSION, TRANSITION
 from .params import POSTaggerModel, POS_MAPPING
 

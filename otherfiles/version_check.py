@@ -23,7 +23,6 @@ ISSUE_TEMPLATE_ITEMS = ["- ParsiPy {0}"]
 SECURITY_ITEMS = ["| {0}           | :white_check_mark: |", "| < {0}         | :x:                |"]
 
 FILES = {
-    os.path.join("otherfiles", "meta.yaml"): META_ITEMS,
     "setup.py": SETUP_ITEMS,
     "README.md": README_ITEMS,
     "CHANGELOG.md": CHANGELOG_ITEMS,
