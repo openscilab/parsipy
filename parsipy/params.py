@@ -3,6 +3,8 @@ from enum import Enum
 
 PARSIPY_VERSION = "0.1"
 
+INVALID_TASKS = "Sorry, the following tasks are not supported yet: {unsupported_tasks}"
+
 POS_MAPPING = {
             10: 'N',     # Noun
             20: 'ADJ',   # ADJective
@@ -19,4 +21,12 @@ POS_MAPPING = {
         }
 
 class POSTaggerModel(Enum):
+    """POSTagger models"""
     RULE_BASED = "rule_based"
+
+class Task(Enum):
+    """Tasks supported by Parsipy"""
+    LEMMA = "lemma"
+    POS = "POS"
+    P2G = "P2G"
+    TOKENIZER = "tokenizer"

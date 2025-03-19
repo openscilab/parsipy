@@ -32,7 +32,7 @@ PREFIXES = {
     'ham': 'hm',
     'hām': 'hʾm',
     'hu': 'hw',
-    'jud': "ywdt'"
+    'jud': "ywdt'",
 }
 
 POSTFIXES = {
@@ -114,5 +114,5 @@ TRANSLITERATION_TO_TRANSCRIPTION_RULES = {
     "ī": ('y'),
     "ō": ('w'),
     "ū": ('w'),
-    "ǰ": ('c')
+    "ǰ": ('c'),
 }

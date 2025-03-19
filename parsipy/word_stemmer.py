@@ -4,17 +4,20 @@ from .data import PREFIXES, POSTFIXES
 from .data import ROOTS
 
 def find_root(word):
-    def is_goal(stem):
-        if stem in ROOTS:
-            return True
-        return False
+    """
+    Function to find the root of a word.
+    
+    :param word: Input word
+    :type word: str
+    :return: Dictionary containing the root of the word and the list of prefixes and postfixes
+    """
 
     candidates = [{"stem": word, "post_fixes_list": [], "pre_fixes_list": []}]
 
     visited = list()
     while candidates:
         candidate = candidates.pop(0)
-        if is_goal(candidate['stem']):
+        if candidate['stem'] in ROOTS:
             return candidate
 
         if candidate not in visited:
@@ -45,9 +48,17 @@ def find_root(word):
 
 
 def run(sentence):
+    """
+    Function to run the word stemmer on a sentence.
+
+    :param sentence: Input sentence
+    :type sentence: str
+    :return: List of dictionaries containing the root of each word in the sentence
+    """
     result = []
     for word in sentence.split():
         roots = find_root(word)
-        data = {'text': word, 'stem': roots['stem']}
+        data = {'text': word,
+                'stem': roots['stem']}
         result.append(data)
     return result

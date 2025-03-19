@@ -23,7 +23,7 @@ def read_description():
             description += c.read()
         return description
     except Exception:
-        return '''TODO'''
+        return '''ParsiPy: NLP Toolkit for Historical Persian Texts in Python'''
 
 
 setup(
@@ -46,7 +46,7 @@ setup(
     include_package_data=True,
     python_requires='>=3.6',
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 2 - Pre-Alpha',
         'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
@@ -63,6 +63,7 @@ setup(
         'Intended Audience :: End Users/Desktop',
         'Intended Audience :: Manufacturing',
         'Intended Audience :: Science/Research',
+        'Intended Audience :: Information Technology',
         'Topic :: Education',
         'Topic :: Scientific/Engineering',
         'Topic :: Scientific/Engineering :: Information Analysis',
