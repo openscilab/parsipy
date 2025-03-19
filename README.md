@@ -164,6 +164,8 @@ Since there is no widely accepted Unicode representation for the original Pahlav
 This module maps phonetic representations to their transliteration which is a middle-form between phonetic and their original characters.
 We also present a tool for converting the transliteration into the original text format.
 
+For converting transliteration to Parsig font, you can use [this exe file and font](https://drive.google.com/drive/folders/1hja6fXt9zZHBs1Hf8YFZl8utygVqbsyd?usp=sharing) in Windows.
+
 ## Issues & bug reports
 
 Just fill an issue and describe it. We'll check it ASAP! or send an email to [parsipy@openscilab.com](mailto:parsipy@openscilab.com "parsipy@openscilab.com"). 
