@@ -73,7 +73,7 @@ You can easily apply tokenization, lemmatization, POS tagging, and phoneme-to-gr
 ```pycon
 >>> from parsipy import pipeline, Task
 >>> result = pipeline(sentence='ān uzīd frāmōš kun ud ān nē mad ēstēd rāy tēmār bēš ma bar',
-                      tasks=[Task.TOKENIZER, Task.LEMMA, Task.POS, Task.P2G])
+                      tasks=[Task.TOKENIZER, Task.LEMMA, Task.POS, Task.P2T])
 ```
 
 The result is a dictionary containing the outputs of all requested tasks:
@@ -129,7 +129,7 @@ The result is a dictionary containing the outputs of all requested tasks:
         {"POS": "ADV", "text": "ma"},
         {"POS": "N", "text": "bar"}
     ],
-    "P2G": [
+    "P2T": [
         {"text": "ān", "transliteration": "ZK"},
         {"text": "uzīd", "transliteration": "ʾwcyt"},
         {"text": "frāmōš", "transliteration": "plʾmwš"},
@@ -159,7 +159,7 @@ Lemmatization reduces words to their base or root forms, removing prefixes and s
 #### POS
 This module assigns a part-of-speech (POS) tag to each word in a sentence based on its grammatical role. The output provides essential grammatical information for further text analysis.
 
-#### P2G
+#### P2T
 Since there is no widely accepted Unicode representation for the original Pahlavi script, digital texts are often written in a phonetic form.
 This module maps phonetic representations to their transliteration which is a middle-form between phonetic and their original characters.
 We also present a tool for converting the transliteration into the original text format.

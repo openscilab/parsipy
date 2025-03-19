@@ -28,5 +28,5 @@ class Task(Enum):
     """Tasks supported by Parsipy"""
     LEMMA = "lemma"
     POS = "POS"
-    P2G = "P2G"
+    P2T = "P2T"
     TOKENIZER = "tokenizer"
