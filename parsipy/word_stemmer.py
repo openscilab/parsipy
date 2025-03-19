@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
+"""word stemmer."""
 import copy
 from .data import PREFIXES, POSTFIXES
 from .data import ROOTS
 
 def find_root(word):
     """
-    Function to find the root of a word.
+    Find the root of a word.
     
     :param word: Input word
     :type word: str
     :return: Dictionary containing the root of the word and the list of prefixes and postfixes
     """
-
     candidates = [{"stem": word, "post_fixes_list": [], "pre_fixes_list": []}]
 
     visited = list()
@@ -49,7 +49,7 @@ def find_root(word):
 
 def run(sentence):
     """
-    Function to run the word stemmer on a sentence.
+    Run the word stemmer on a sentence.
 
     :param sentence: Input sentence
     :type sentence: str

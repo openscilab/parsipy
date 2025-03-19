@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""parsipy module."""
 from .params import Task, PARSIPY_VERSION, POSTaggerModel
 from .word_stemmer import find_root
 from .tokenizer import preprocess, cleaning

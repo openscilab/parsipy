@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+"""parameters and constants."""
 from enum import Enum
 
 PARSIPY_VERSION = "0.1"
@@ -21,11 +22,13 @@ POS_MAPPING = {
         }
 
 class POSTaggerModel(Enum):
-    """POSTagger models"""
+    """POSTagger models."""
+
     RULE_BASED = "rule_based"
 
 class Task(Enum):
-    """Tasks supported by Parsipy"""
+    """Tasks supported by Parsipy."""
+
     LEMMA = "lemma"
     POS = "POS"
     P2T = "P2T"
