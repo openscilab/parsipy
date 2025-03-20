@@ -1,19 +1,21 @@
 # -*- coding: utf-8 -*-
 """tokenizer."""
+
+
 def cleaning(text):
     """
     Clean the text from special characters.
-    
+
     :param text: input text
     :type text: str
     :return: cleaned text
     """
     return text.replace('*', '')\
-                .replace('(w)', '')\
-                .replace('[', '')\
-                .replace(']', '')\
-                .replace('<', '')\
-                .replace('>', '')
+        .replace('(w)', '')\
+        .replace('[', '')\
+        .replace(']', '')\
+        .replace('<', '')\
+        .replace('>', '')
 
 
 def preprocess(sentence):
