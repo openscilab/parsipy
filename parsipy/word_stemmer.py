@@ -4,10 +4,11 @@ import copy
 from .data import PREFIXES, POSTFIXES
 from .data import ROOTS
 
+
 def find_root(word):
     """
     Find the root of a word.
-    
+
     :param word: Input word
     :type word: str
     :return: Dictionary containing the root of the word and the list of prefixes and postfixes

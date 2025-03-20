@@ -10,7 +10,7 @@ class POSTaggerRuleBased:
     def __init__(self, smoothing_const=0.0001):
         """
         Initialize the POS tagger.
-        
+
         :param smoothing_const: Smoothing constant for unknown words
         :type smoothing_const: float
         """
@@ -22,7 +22,7 @@ class POSTaggerRuleBased:
     def viterbi(self, words, smoothing=True):
         """
         Viterbi decoding algorithm for POS tagging.
-        
+
         :param words: List of words
         :type words: list
         :param smoothing: Whether to use smoothing for unknown words
@@ -64,7 +64,7 @@ class POSTagger:
     def __init__(self, model=POSTaggerModel.RULE_BASED):
         """
         Initialize the POS tagger.
-        
+
         :param model: POS tagger model
         :type model: POSTaggerModel
         """
@@ -77,7 +77,7 @@ class POSTagger:
     def tag(self, sentence):
         """
         Return part-of-speech information of the words in the sentence.
-        
+
         :param sentence: Input sentence
         :type sentence: str
         :return: List of dictionaries containing word and its POS tag

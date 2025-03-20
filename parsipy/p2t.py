@@ -9,7 +9,7 @@ from .data import STEMS
 def oov_transliterate(word):
     """
     Transliterates a word that is not in the STEMS dictionary.
-    
+
     :param word: word to be transliterated
     :type word: str
     :return: str
