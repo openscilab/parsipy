@@ -175,6 +175,23 @@ Just fill an issue and describe it. We'll check it ASAP! or send an email to [pa
 ## References
 1- گشتاسب, فرزانه, and حاجی پور. "توصیف و تبیین ماهیت عدالت خسرو انوشیروان در متون فارسی و جستجوی پیشینه آن در متون فارسی میانه." (فصلنامه مطالعات تاریخ فرهنگی) پژوهشنامه انجمن ایرانی تاریخ 14.53 (2022): 101-125.
 
+## Cite
+
+If you use ParsiPy in your research, we would appreciate citations to the following paper:
+
+
+[Farsi, Farhan, Parnian Fazel, Sepand Haghighi, Sadra Sabouri, Farzaneh Goshtasb, Nadia Hajipour, Ehsaneddin Asgari, and Hossein Sameti. "ParsiPy: NLP Toolkit for Historical Persian Texts in Python." *arXiv preprint arXiv:2503.17810* (2025).](https://arxiv.org/abs/2503.17810)
+
+
+```bibtex
+@article{farsi2025parsipy,
+  title={ParsiPy: NLP Toolkit for Historical Persian Texts in Python},
+  author={Farsi, Farhan and Fazel, Parnian and Haghighi, Sepand and Sabouri, Sadra and Goshtasb, Farzaneh and Hajipour, Nadia and Asgari, Ehsaneddin and Sameti, Hossein},
+  journal={arXiv preprint arXiv:2503.17810},
+  year={2025}
+}
+```
+
 ## Show your support
 
 
