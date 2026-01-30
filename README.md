@@ -208,8 +208,7 @@ If you use ParsiPy in your research, we would appreciate citations to the follow
     url = "https://aclanthology.org/2025.alp-1.17/",
     doi = "10.18653/v1/2025.alp-1.17",
     pages = "137--149",
-    ISBN = "979-8-89176-235-0",
-    abstract = "The study of historical languages presents unique challenges due to their complex ortho-graphic systems, fragmentary textual evidence, and the absence of standardized digital repre-sentations of text in those languages. Tack-ling these challenges needs special NLP digi-tal tools to handle phonetic transcriptions and analyze ancient texts. This work introduces ParsiPy1, an NLP toolkit designed to facili-tate the analysis of historical Persian languages by offering modules for tokenization, lemma-tization, part-of-speech tagging, phoneme-to-transliteration conversion, and word embed-ding. We demonstrate the utility of our toolkit through the processing of Parsig (Middle Per-sian) texts, highlighting its potential for ex-panding computational methods in the study of historical languages. Through this work, we contribute to the field of computational philol-ogy, offering tools that can be adapted for the broader study of ancient texts and their digital preservation."
+    ISBN = "979-8-89176-235-0"
 }
 ```
 
