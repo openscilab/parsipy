@@ -184,11 +184,31 @@ If you use ParsiPy in your research, we would appreciate citations to the follow
 
 
 ```bibtex
-@article{farsi2025parsipy,
-  title={ParsiPy: NLP Toolkit for Historical Persian Texts in Python},
-  author={Farsi, Farhan and Fazel, Parnian and Haghighi, Sepand and Sabouri, Sadra and Goshtasb, Farzaneh and Hajipour, Nadia and Asgari, Ehsaneddin and Sameti, Hossein},
-  journal={arXiv preprint arXiv:2503.17810},
-  year={2025}
+@inproceedings{farsi-etal-2025-parsipy,
+    title = "{P}arsi{P}y: {NLP} Toolkit for Historical {P}ersian Texts in Python",
+    author = "Farsi, Farhan  and
+      Fazel, Parnian  and
+      Haghighi, Sepand  and
+      Sabouri, Sadra  and
+      Goshtasb, Farzaneh  and
+      Hajipour, Nadia  and
+      Asgari, Ehsaneddin  and
+      Sameti, Hossein",
+    editor = "Anderson, Adam  and
+      Gordin, Shai  and
+      Li, Bin  and
+      Liu, Yudong  and
+      Passarotti, Marco C.  and
+      Sprugnoli, Rachele",
+    booktitle = "Proceedings of the Second Workshop on Ancient Language Processing",
+    month = may,
+    year = "2025",
+    address = "The Albuquerque Convention Center, Laguna",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.alp-1.17/",
+    doi = "10.18653/v1/2025.alp-1.17",
+    pages = "137--149",
+    ISBN = "979-8-89176-235-0"
 }
 ```
 
