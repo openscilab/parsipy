@@ -1,16 +1,7 @@
 # -*- coding: utf-8 -*-
 """Setup module."""
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
 
-
-def get_requires():
-    """Read requirements.txt."""
-    requirements = open("requirements.txt", "r").read()
-    return list(filter(lambda x: x != "", requirements.split()))
-
+from setuptools import setup
 
 def read_description():
     """Read README.md and CHANGELOG.md."""
@@ -28,8 +19,7 @@ def read_description():
 
 setup(
     name='parsipy',
-    packages=[
-        'parsipy', ],
+    packages=['parsipy'],
     version='0.1',
     description='ParsiPy: NLP Toolkit for Historical Persian Texts in Python',
     long_description=read_description(),
@@ -38,11 +28,11 @@ setup(
     author_email='parsipy@openscilab.com',
     url='https://github.com/openscilab/parsipy',
     download_url='https://github.com/openscilab/parsipy/tarball/v0.1',
-    keywords="nlp persian text",
+    keywords='nlp persian text',
     project_urls={
-            'Source': 'https://github.com/openscilab/parsipy',
+        'Source': 'https://github.com/openscilab/parsipy',
     },
-    install_requires=get_requires(),
+    install_requires=['pandas>=0.24.2'],
     include_package_data=True,
     python_requires='>=3.7',
     classifiers=[
