@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - `README.md` modified
 - Dependencies structure modified
 - `Python 3.14` added to `test.yml`
+- `Python 3.15` added to `test.yml`
 - `Python 3.6` support dropped
 ## [0.1] - 2025-03-21
 ### Added
